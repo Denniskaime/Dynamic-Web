@@ -36,24 +36,30 @@ h1 {
   }
   .container{
     border: 10px solid #000;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    max-width: 1200px;
+    margin: auto;
   }
   .content{
     border: 1px solid #000;
     padding: 10px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px;
   }
   .left-section{
     flex:1;
     background-color: lightgray;
     padding: 20px;
+    grid-column: 1/ span 1;
   }
   .right-section {
     flex: 1;
     background-color: gray;
     padding: 20px;
-  }
+    grid-column: 2/span 1;
+ 
 
   .navbar ul{
     list-style: none;
@@ -90,6 +96,16 @@ header{
   padding: 20px;
   text-align: center;
 }
+}
+@media screen and 
+  (max-width: 768px)
+{
+  .registration,
+  .login{
+    margin-top: 0;
+  }
+
+}
 .registration,
 .payment
 .login {
@@ -98,7 +114,23 @@ header{
   margin: 20px auto;
   padding: 20px;
   border: 1px solid #ccc;
+  display: grid;
+  grid-gap:10px;
 }
+.registration form label,
+.login form label {
+  display: block;
+}
+@media  screen and (min-width:768px) {
+  .registration form,
+  .login form {
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media  screen and (min-width:768px) {
+  img
+{width: 100%;
+    height:auto;}}
 h2{
   margin-top: 0;
 }
