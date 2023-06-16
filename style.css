@@ -16,7 +16,7 @@ h1 {
   }
   .intro {
     background-color: hsl(300, 15%, 94%);
-    margin-right: 40%;
+    margin: 0;
   }
   .highlight{
     color: orange;
@@ -56,9 +56,11 @@ h1 {
   }
   .right-section {
     flex: 1;
+    margin-top: 20PX;
     background-color: gray;
     padding: 20px;
     grid-column: 2/span 1;
+    float: right;
  
 
   .navbar ul{
